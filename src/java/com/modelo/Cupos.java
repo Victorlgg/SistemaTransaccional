@@ -34,7 +34,7 @@ public class Cupos {
 //                //String sql1 = "INSERT INTO tbl_usuario (nombre,apellido,edad,correo,usuario,clave) VALUES('a','b',1,'c','d','e')";
 //                st.executeUpdate(sql);
 //                System.out.println(sql);
-//                agregado = true;
+//                limpiado = true;
 //                st.close();
                 
                 //Procedimientos almacenados
@@ -58,4 +58,30 @@ public class Cupos {
     
     return agregado;
     }
+    
+    public static boolean limpiarCupos(){
+    boolean limpiado =false;
+    
+        try {
+            Conexion c = new Conexion();
+            Connection con = c.getConexion();
+            if(con!=null){
+                CallableStatement sp = con.prepareCall("{call limpiarCupos()}");
+                ResultSet rs1 = sp.getResultSet();
+//                String resultado= (String)sp;
+
+                sp.execute();
+                limpiado = true;
+                sp.close();
+                
+                
+            }
+        } catch (SQLException e) {
+            limpiado = false;
+            e.printStackTrace();
+        }
+    
+    return limpiado;
+    }
+    
 }

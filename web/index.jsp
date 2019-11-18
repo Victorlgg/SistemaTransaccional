@@ -29,22 +29,6 @@
                         <td>Id de la Asignatura</td>
                         <td><input type="number" name="id_Asign" value=""> </td>
                     </tr>
-                    <!--<tr>
-                        <td>EDAD</td>
-                        <td><input type="text" name="edad" value=""> </td>
-                    </tr>
-                    <tr>
-                        <td>CORREO</td>
-                        <td><input type="text" name="correo" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>USUARIO</td>
-                        <td><input type="text" name="usuario" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>CLAVE</td>
-                        <td><input type="password" name="clave" value=""></td>
-                    </tr>-->
                     <tr>
                         <td colspan="2" align="center">
                         <input type="submit" name="enviar" value="REGISTRAR"></td>
@@ -54,12 +38,13 @@
 
         </form>
         
-        <form action="ServletLimpiar" method="POST"></form>
+        <form action="ServletLimpiar" method="POST">
        <table>
                     <tr>
                         <td colspan="2" align="center">
                         <input type="submit" name="enviar" value="LimpiarCupos"></td>
                     </tr>
        </table>
+            </form>
     </body>
 </html>

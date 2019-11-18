@@ -19,7 +19,7 @@ public class Conexion {
     
     public Conexion() throws SQLException {
         try{
-        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        Class.forName("com.mysql.jdbc.Driver").newInstance();//Necesario para conectarse a bd
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyectost","root","");
             if(con!=null){System.out.println("estable");}
         
